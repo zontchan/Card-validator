@@ -53,6 +53,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist'), // Каталог для статики
         },
         open: true, // Автоматически открывать браузер
+        port: 9000,
     },
     mode: 'development'
 };

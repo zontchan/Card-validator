@@ -24,7 +24,7 @@ export default class CardValidator{
         <li class="card-ico mir"></li>
         <li class="card-ico ae"></li>
     </ul>
-    <form>
+    <form class="form">
         <div>
             <input type="text" class="card-input" placeholder="Credit card number">
             <button class="button">Validate</button>
@@ -54,6 +54,7 @@ export default class CardValidator{
 
         this.input.addEventListener('input', (e) => {
             this.clearResults();
+            console.log(this.input.type);
             this.input.value = this.input.value.replace(/[^\d]/g,'');
         });
     }

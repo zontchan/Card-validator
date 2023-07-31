@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --coverage",
+    "test": "jest --testPathPattern=./src/",
+    "coverage": "jest --testPathPattern=./src/ --coverage",
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
     "build": "webpack --mode production",
     "start": "webpack serve --mode development"
   },
@@ -23,6 +24,7 @@
     "html-webpack-plugin": "^5.5.3",
     "jest": "^29.6.2",
     "mini-css-extract-plugin": "^2.7.6",
+    "puppeteer": "^20.9.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
