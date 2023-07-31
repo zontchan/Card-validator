@@ -5,10 +5,12 @@ describe('check validity of card number', () => {
     let page = null;
     const baseUrl = 'http://localhost:9000';
     beforeAll(async () => {
-        browser = await puppetteer.launch({
-            headless: "new", // show gui
+        browser = await puppetteer.launch(//{
+            //headless: false, // show gui
+            //slowMo: 100
             //devtools: true, // show devTools
-        });
+        //}
+        );
         page = await browser.newPage();
     });
     afterAll(async () => {
