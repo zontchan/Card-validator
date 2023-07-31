@@ -19,7 +19,6 @@ describe('check validity of card number', () => {
         test('should add .valid class for valid card number', async () => {
             await page.goto(baseUrl);
             const form = await page.$('.form');
-            const input = await form.$('card-input');
             await page.$eval('.card-input', el => el.value = '4929620273994371');
             const submit = await form.$('.button');
             submit.click();
@@ -28,7 +27,6 @@ describe('check validity of card number', () => {
     test('should add .invalid class for invalid card number', async () => {
         await page.goto(baseUrl);
         const form = await page.$('.form');
-        const input = await form.$('card-input');
         await page.$eval('.card-input', el => el.value = '4929620273994372');
         const submit = await form.$('.button');
         submit.click();
