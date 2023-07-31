@@ -6,7 +6,7 @@ describe('check validity of card number', () => {
     const baseUrl = 'http://localhost:9000';
     beforeAll(async () => {
         browser = await puppetteer.launch(//{
-            //headless: false, // show gui
+            {headless: "new"}// show gui
             //slowMo: 100
             //devtools: true, // show devTools
         //}
