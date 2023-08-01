@@ -54,7 +54,6 @@ export default class CardValidator{
 
         this.input.addEventListener('input', (e) => {
             this.clearResults();
-            console.log(this.input.type);
             this.input.value = this.input.value.replace(/[^\d]/g,'');
         });
     }
