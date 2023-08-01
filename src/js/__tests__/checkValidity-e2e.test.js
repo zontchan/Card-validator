@@ -6,9 +6,10 @@ describe('check validity of card number', () => {
     const baseUrl = 'http://localhost:9000';
     beforeAll(async () => {
         browser = await puppetteer.launch({
-           headless: 'new',// show gui
-            //slowMo: 100,
-            //devtools: true, // show devTools
+                executablePath: 'C:\\web\\theory\\Продвинутый JS в браузере домашка\\MY HW\\testing-card-validator_hw\\.cache\\puppeteer\\chrome\\win64-115.0.5790.98\\chrome-win64\\chrome.exe',
+           headless: false,// show gui
+            slowMo: 100,
+            devtools: true, // show devTools
        }
         );
         page = await browser.newPage();
